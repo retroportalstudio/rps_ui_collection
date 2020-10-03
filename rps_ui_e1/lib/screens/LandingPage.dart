@@ -76,20 +76,8 @@ class LandingPage extends StatelessWidget {
                   scrollDirection: Axis.horizontal,
                   physics: BouncingScrollPhysics(),
                   child: Row(
-                    children: [
-                      ChoiceOption(
-                        text: "<\$220,000",
-                      ),
-                      ChoiceOption(
-                        text: "For Sale",
-                      ),
-                      ChoiceOption(
-                        text: "3-4 Beds",
-                      ),
-                      ChoiceOption(
-                        text: ">1000 sq ft",
-                      ),
-                    ],
+                    children: ["<\$220,000","For Sale","3-4 Beds",">1000 sqft"]
+                        .map((filter) => ChoiceOption(text: filter)).toList(),
                   ),
                 ),
                 addVerticalSpace(10),
