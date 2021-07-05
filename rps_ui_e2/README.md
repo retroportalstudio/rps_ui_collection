@@ -1,7 +1,10 @@
-# Screen 2 - Flutter UI Collection
+# Design 2 - Flutter UI Collection
 
-![Landing Screen](https://github.com/retroportalstudio/rps_ui_collection/blob/main/rps_ui_e2/capture_1.png)
-![Product Screen](https://github.com/retroportalstudio/rps_ui_collection/blob/main/rps_ui_e2/capture_2.png)
+![Capture](https://github.com/retroportalstudio/rps_ui_collection/blob/main/rps_ui_e2/capture.jpg)
+
+# Inspired From:
+
+https://dribbble.com/shots/9080805/attachments/1173248?mode=media
 
 ## Packages Used
 
