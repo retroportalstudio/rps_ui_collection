@@ -1,0 +1,1 @@
+![Design 1](https://github.com/retroportalstudio/rps_ui_collection/blob/main/captures/capture_1.jpg) | ![Design 2](https://github.com/retroportalstudio/rps_ui_collection/blob/main/captures/capture_2.jpg)
