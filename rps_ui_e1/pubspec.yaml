@@ -1,5 +1,7 @@
 name: rps_ui_e1
-description: A new Flutter project.
+description: Flutter UI Collection - Design 1
+authors:
+  - Creator <retroportalstudio@gmail.com>
 
 # The following line prevents the package from being accidentally published to
 # pub.dev using `pub publish`. This is preferred for private packages.

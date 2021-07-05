@@ -1,16 +1,13 @@
-# rps_ui_e1
+# Design 1 - Flutter UI Collection
 
-A new Flutter project.
+![Capture](https://github.com/retroportalstudio/rps_ui_collection/blob/main/rps_ui_e1/episode_1_design.jpg)
 
-## Getting Started
+# Inspired From:
 
-This project is a starting point for a Flutter application.
+https://www.instagram.com/p/CCa_uesgkK8/
 
-A few resources to get you started if this is your first Flutter project:
+## Packages Used
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```sh
+intl: ^0.16.1
+```

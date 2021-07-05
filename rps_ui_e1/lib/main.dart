@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
     double screenWidth = window.physicalSize.width;
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Screen 1',
+      title: 'Design 1',
       theme: ThemeData(primaryColor: COLOR_WHITE, accentColor: COLOR_DARK_BLUE, textTheme: screenWidth < 500 ? TEXT_THEME_SMALL : TEXT_THEME_DEFAULT, fontFamily: "Montserrat"),
       home: LandingPage(),
     );
