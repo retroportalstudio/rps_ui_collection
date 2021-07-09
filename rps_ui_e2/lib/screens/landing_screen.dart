@@ -30,7 +30,6 @@ class LandingScreen extends StatefulWidget {
 class _LandingScreenState extends State<LandingScreen> {
   final FocusNode _focusNode = FocusNode();
 
-
   @override
   void dispose() {
     super.dispose();
@@ -39,6 +38,7 @@ class _LandingScreenState extends State<LandingScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final TextTheme textTheme = Theme.of(context).textTheme;
     return SafeArea(
       child: Scaffold(
         resizeToAvoidBottomInset: false,
@@ -79,7 +79,7 @@ class _LandingScreenState extends State<LandingScreen> {
                                       flex: 7,
                                       child: Text(
                                         "How Hungry are you Today?",
-                                        style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold, color: Colors.white),
+                                        style: textTheme.headline5!.apply(color: Colors.white),
                                       ),
                                     )
                                   ],
@@ -130,14 +130,14 @@ class _LandingScreenState extends State<LandingScreen> {
                                 children: [
                                   Text(
                                     "Popular Foods",
-                                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
+                                    style: textTheme.headline5,
                                   ),
                                   Expanded(
                                     child: Center(),
                                   ),
                                   Text(
                                     "View All > ",
-                                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14, color: Colors.orange),
+                                    style: textTheme.subtitle2!.apply(color: COLOR_ORANGE),
                                   ),
                                   addHorizontalSpace(10),
                                 ],
@@ -185,7 +185,7 @@ class _LandingScreenState extends State<LandingScreen> {
                                                 addVerticalSpace(10),
                                                 Text(
                                                   "${category['name']}",
-                                                  style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black),
+                                                  style: textTheme.bodyText2!.apply(color: COLOR_BLACK),
                                                 )
                                               ],
                                             ),

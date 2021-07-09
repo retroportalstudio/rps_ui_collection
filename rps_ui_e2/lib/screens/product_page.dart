@@ -20,6 +20,7 @@ class _ProductPageState extends State<ProductPage> {
 
   @override
   Widget build(BuildContext context) {
+    final TextTheme textTheme = Theme.of(context).textTheme;
     return SafeArea(
       child: Scaffold(
         body: LayoutBuilder(builder: (context, constraints) {
@@ -81,14 +82,14 @@ class _ProductPageState extends State<ProductPage> {
                                           children: [
                                             Text(
                                               "${widget.productData['name']}",
-                                              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                                              style: textTheme.headline5,
                                             ),
                                             addVerticalSpace(5),
                                             RichText(
                                                 overflow: TextOverflow.ellipsis,
                                                 text: TextSpan(children: [
                                                   WidgetSpan(child: Icon(Icons.location_on, color: Colors.red, size: 15)),
-                                                  TextSpan(text: "${widget.productData['rest']}", style: TextStyle(color: COLOR_GREY, fontSize: 12))
+                                                  TextSpan(text: "${widget.productData['rest']}", style: textTheme.subtitle2!.apply(color: COLOR_GREY))
                                                 ])),
                                           ],
                                         ),
@@ -96,8 +97,8 @@ class _ProductPageState extends State<ProductPage> {
                                             textAlign: TextAlign.right,
                                             overflow: TextOverflow.ellipsis,
                                             text: TextSpan(children: [
-                                              TextSpan(text: "\$", style: TextStyle(color: Colors.deepOrange)),
-                                              TextSpan(text: "${widget.productData['price']}", style: TextStyle(color: Colors.deepOrange, fontSize: 25, fontWeight: FontWeight.bold))
+                                              TextSpan(text: "\$", style: TextStyle(color: COLOR_ORANGE)),
+                                              TextSpan(text: "${widget.productData['price']}", style: textTheme.headline5!.apply(color: COLOR_ORANGE))
                                             ])),
                                       ],
                                     ),
@@ -112,19 +113,19 @@ class _ProductPageState extends State<ProductPage> {
                                               overflow: TextOverflow.ellipsis,
                                               text: TextSpan(children: [
                                                 WidgetSpan(child: Icon(Icons.star, color: Colors.orange, size: 15)),
-                                                TextSpan(text: "${widget.productData['rating']}", style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold, fontSize: 12))
+                                                TextSpan(text: "${widget.productData['rating']}", style: textTheme.bodyText2!.apply(fontWeightDelta: 4))
                                               ])),
                                           RichText(
                                               overflow: TextOverflow.ellipsis,
                                               text: TextSpan(children: [
                                                 WidgetSpan(child: Icon(Icons.access_time_sharp, color: Colors.red, size: 15)),
-                                                TextSpan(text: " 18 Mins", style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold, fontSize: 12))
+                                                TextSpan(text: " 18 Mins", style: textTheme.bodyText2!.apply(fontWeightDelta: 4))
                                               ])),
                                           RichText(
                                               overflow: TextOverflow.ellipsis,
                                               text: TextSpan(children: [
                                                 WidgetSpan(child: Icon(Icons.location_on, color: Colors.green, size: 15)),
-                                                TextSpan(text: "2.3 KM", style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold, fontSize: 12))
+                                                TextSpan(text: "2.3 KM" , style: textTheme.bodyText2!.apply(fontWeightDelta: 4))
                                               ])),
                                         ],
                                       ),
@@ -132,13 +133,14 @@ class _ProductPageState extends State<ProductPage> {
                                     Divider(),
                                     Text(
                                       "Overview",
-                                      style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                                      style: textTheme.headline6,
                                     ),
                                     addVerticalSpace(10),
                                     Text(
                                       "A pizza that decidedly staggers under an overload of golden corn, exotic black olives, crunchy onions, crisp capsicum, succulent mushrooms, juicyfresh tomatoes and jalapeno - with extra cheese to go all around. A pizza that goes ballistic on veggies! Check out this mouth watering overload of crunchy, crisp capsicum, succulent mushrooms and fresh tomatoes",
-                                      style: TextStyle(fontSize: 14, height: 1.5),
+                                      style: textTheme.subtitle2!.apply(heightDelta: 2.0),
                                     ),
+                                    addVerticalSpace(100),
                                   ],
                                 ),
                               ),

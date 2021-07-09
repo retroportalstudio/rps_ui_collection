@@ -10,6 +10,7 @@ class ProductItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final TextTheme textTheme = Theme.of(context).textTheme;
     final height = width * 4 / 3;
     return Container(
       margin: const EdgeInsets.only(right: 20),
@@ -46,14 +47,14 @@ class ProductItem extends StatelessWidget {
                 Expanded(child: Center()),
                 Text(
                   "${productData['name']}",
-                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                  style: textTheme.headline6,
                 ),
                 addVerticalSpace(5),
                 RichText(
                     overflow: TextOverflow.ellipsis,
                     text: TextSpan(children: [
                       WidgetSpan(child: Icon(Icons.location_on, color: Colors.red, size: 15)),
-                      TextSpan(text: "${productData['rest']}", style: TextStyle(color: COLOR_GREY, fontSize: 12))
+                      TextSpan(text: "${productData['rest']}", style: textTheme.caption)
                     ])),
                 addVerticalSpace(15),
                 Row(
@@ -65,7 +66,7 @@ class ProductItem extends StatelessWidget {
                           overflow: TextOverflow.ellipsis,
                           text: TextSpan(children: [
                             WidgetSpan(child: Icon(Icons.star, color: Colors.orange, size: 15)),
-                            TextSpan(text: "${productData['rating']}", style: TextStyle(color: Colors.black, fontSize: 12, fontWeight: FontWeight.bold))
+                            TextSpan(text: "${productData['rating']}", style: textTheme.subtitle2!.apply(fontWeightDelta: 4))
                           ])),
                     ),
                     Expanded(
@@ -74,8 +75,8 @@ class ProductItem extends StatelessWidget {
                           textAlign: TextAlign.right,
                           overflow: TextOverflow.ellipsis,
                           text: TextSpan(children: [
-                            TextSpan(text: "\$", style: TextStyle(color: Colors.deepOrange)),
-                            TextSpan(text: "${productData['price']}", style: TextStyle(color: Colors.deepOrange, fontSize: 25, fontWeight: FontWeight.bold))
+                            TextSpan(text: "\$", style: TextStyle(color: COLOR_ORANGE)),
+                            TextSpan(text: "${productData['price']}", style: textTheme.headline5!.apply(color: COLOR_ORANGE))
                           ])),
                     ),
                   ],

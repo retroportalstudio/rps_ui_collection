@@ -10,14 +10,12 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
-        statusBarColor: COLOR_GREEN
-    ));
+    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(statusBarColor: COLOR_GREEN));
     return LayoutBuilder(builder: (context, constraints) {
       return MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'Screen 2',
-        theme: ThemeData(primaryColor: COLOR_GREEN),
+        theme: ThemeData(textTheme: defaultText),
         home: LandingScreen(),
       );
     });
